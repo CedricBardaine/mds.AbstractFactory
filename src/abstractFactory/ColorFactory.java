@@ -4,6 +4,7 @@ import abstractFactory.color.Blue;
 import abstractFactory.color.Color;
 import abstractFactory.color.Green;
 import abstractFactory.color.Red;
+import abstractFactory.shape.Shape;
 
 public class ColorFactory extends AbstractFactory{
 	
@@ -19,6 +20,11 @@ public class ColorFactory extends AbstractFactory{
 		default:
 			return null ; 
 		}
+	}
+
+	@Override
+	public Shape getShape(String string) {
+		return null;
 	}
 
 }

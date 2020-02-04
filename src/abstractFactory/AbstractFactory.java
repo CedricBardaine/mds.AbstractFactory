@@ -3,16 +3,10 @@ package abstractFactory;
 import abstractFactory.color.Color;
 import abstractFactory.shape.Shape;
 
-public class AbstractFactory {
+public abstract class AbstractFactory {
 
-	public Shape getShape(String string) {
-		System.out.println("getting null");
-		return null;
-	}
+	public abstract Shape getShape(String string) ;
 
-	public Color getColor(String string) {
-		System.out.println("getting null");
-		return null;
-	}
+	public abstract Color getColor(String string) ;
 
 }

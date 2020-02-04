@@ -1,5 +1,6 @@
 package abstractFactory;
 
+import abstractFactory.color.Color;
 import abstractFactory.shape.Circle;
 import abstractFactory.shape.Rectangle;
 import abstractFactory.shape.Shape;
@@ -19,5 +20,10 @@ public class ShapeFactory extends AbstractFactory {
 		default:
 			return null ; 
 		}
+	}
+
+	@Override
+	public Color getColor(String string) {
+		return null;
 	}
 }
