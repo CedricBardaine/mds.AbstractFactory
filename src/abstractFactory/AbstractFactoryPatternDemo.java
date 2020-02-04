@@ -7,50 +7,51 @@ public class AbstractFactoryPatternDemo {
 	
 	
 	public static void main(String[] args) {
-//		FactoryProducer fp ; 
+		// FactoryProducer fp ; 
 		
 		// get shape factory    
-		AbstractFactory shapeFactory = FactoryProducer.getFactory(ShapeFactory.SHAPE);
+		AbstractFactory shapeFactory = FactoryProducer.getFactory("shape");
 		
 		// get an object of Shape Circle   
-		Shape shape1 = shapeFactory.getShape(Circle.CIRCLE);
+		Shape shape1 = shapeFactory.getShape("circle");
 		
 		// call draw method of Shape Circle
 		shape1.draw();
 		
 		// get an object of Shape Rectangle  
-		Shape shape2 = shapeFactory.getShape(Rectangle.RECTANGLE);
+		Shape shape2 = shapeFactory.getShape("rectangle");
 		
 		// call draw method of Shape Rectangle
 		shape2.draw();
 		
 		// get an object of Shape Square    
-		Shape shape3 = shapeFactory.getShape(Square.SQUARE);
+		Shape shape3 = shapeFactory.getShape("square");
 		
 		// call draw method of Shape Square
 		shape3.draw();
 		
 		// get color factory   
-		AbstractFactory colorFactory = FactoryProducer.getFactory(ColorFactory.COLOR);
+		AbstractFactory colorFactory = FactoryProducer.getFactory("color");
 		
 		// get an object of Color Red   
-		Color color1 = colorFactory.getColor(Red.RED);
+		Color color1 = colorFactory.getColor("red");
 		
 		// call fill method of Red
 		color1.fill();
 		// get an object of Color Green    
-		Color color2 = colorFactory.getColor(Green.GREEN);
+		Color color2 = colorFactory.getColor("green");
 		
 		// call fill method of Green
 		color2.fill();
+		
 		// get an object of Color Blue  
-		Color color3 = colorFactory.getColor(Blue.BLUE);
+		Color color3 = colorFactory.getColor("blue");
 		
 		// call fill method of Color Blue
 		color3.fill();
 		
 		// get an object of Shape Circle   
-		Shape myShape = FactoryProducer.getFactory(ShapeFactory.SHAPE).getShape(Circle.CIRCLE);
+		Shape myShape = FactoryProducer.getFactory("shape").getShape("circle");
 		
 		// call draw method of Shape Circle
 		myShape.draw();

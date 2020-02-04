@@ -1,8 +1,18 @@
 package abstractFactory;
 
+import abstractFactory.color.Color;
+import abstractFactory.shape.Shape;
+
 public class AbstractFactory {
-	
-	public Shape getShape() {return null ;}
-	public Color getColor() {return null ;}
-	
+
+	public Shape getShape(String string) {
+		System.out.println("getting null");
+		return null;
+	}
+
+	public Color getColor(String string) {
+		System.out.println("getting null");
+		return null;
+	}
+
 }
