@@ -7,7 +7,10 @@ public class AbstractFactoryPatternDemo {
 	
 	
 	public static void main(String[] args) {
-		// FactoryProducer fp ; 
+		
+		
+		
+		System.out.println("### Ex 1 : ");
 		
 		// get shape factory    
 		AbstractFactory shapeFactory = FactoryProducer.getFactory("shape");
@@ -56,5 +59,28 @@ public class AbstractFactoryPatternDemo {
 		// call draw method of Shape Circle
 		myShape.draw();
 		
+		
+		
+		System.out.println("### Ex 2 : ");
+		
+		//get directly an item with factory auto selecting
+		Item item = FactoryProducer.getItem(AllObjects.BLUE);   
+		System.out.println("this is a " + item.getName());
+		
+		item = FactoryProducer.getItem(AllObjects.GREEN);  
+		System.out.println("this is a " + item.getName());
+		
+		item = FactoryProducer.getItem(AllObjects.RED);  
+		System.out.println("this is a " + item.getName());
+		
+		item = FactoryProducer.getItem(AllObjects.SQUARE);   
+		System.out.println("this is a " + item.getName());
+		
+		item = FactoryProducer.getItem(AllObjects.RECTANGLE);  
+		System.out.println("this is a " + item.getName());
+		
+		item = FactoryProducer.getItem(AllObjects.CIRCLE);   
+		System.out.println("this is a " + item.getName());
+
 	}
 }
