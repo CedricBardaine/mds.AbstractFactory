@@ -21,9 +21,23 @@ public class ShapeFactory extends AbstractFactory {
 			return null ; 
 		}
 	}
+//	public Item getShape(AllObjects type) {
+//		switch (type) {
+//		case CIRCLE:
+//			return new Circle() ; 
+//		case SQUARE:
+//			return new Square() ; 
+//		case RECTANGLE:
+//			return new Rectangle() ; 
+//			
+//		default:
+//			return null ; 
+//		}
+//	}
 
 	@Override
 	public Color getColor(String string) {
 		return null;
 	}
+
 }

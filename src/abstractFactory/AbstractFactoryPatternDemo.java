@@ -64,22 +64,22 @@ public class AbstractFactoryPatternDemo {
 		System.out.println("### Ex 2 : ");
 		
 		//get directly an item with factory auto selecting
-		Item item = FactoryProducer.getItem(AllObjects.BLUE);   
+		Item item = FactoryProducer.getItem(AllObjects.BLUE.toString().toLowerCase() );   
 		System.out.println("this is a " + item.getName());
 		
-		item = FactoryProducer.getItem(AllObjects.GREEN);  
+		item = FactoryProducer.getItem(AllObjects.GREEN.toString().toLowerCase() );  
 		System.out.println("this is a " + item.getName());
 		
-		item = FactoryProducer.getItem(AllObjects.RED);  
+		item = FactoryProducer.getItem(AllObjects.RED.toString().toLowerCase() );  
 		System.out.println("this is a " + item.getName());
 		
-		item = FactoryProducer.getItem(AllObjects.SQUARE);   
+		item = FactoryProducer.getItem(AllObjects.SQUARE.toString().toLowerCase() );   
 		System.out.println("this is a " + item.getName());
 		
-		item = FactoryProducer.getItem(AllObjects.RECTANGLE);  
+		item = FactoryProducer.getItem(AllObjects.RECTANGLE.toString().toLowerCase() );  
 		System.out.println("this is a " + item.getName());
 		
-		item = FactoryProducer.getItem(AllObjects.CIRCLE);   
+		item = FactoryProducer.getItem(AllObjects.CIRCLE.toString().toLowerCase() );   
 		System.out.println("this is a " + item.getName());
 
 	}

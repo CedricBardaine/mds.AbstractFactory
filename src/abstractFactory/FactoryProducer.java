@@ -18,37 +18,49 @@ public class FactoryProducer {
 		default:
 			return null;
 		}
-	}	
-	
-	public static Item getItem(AllObjects type) {
-		Item ret = null ; 
-		
-		switch (type) {
-		case CIRCLE:
-			ret = new Circle();
-			break ;
-		case SQUARE:
-			ret = new Square();
-			break ;
-		case RECTANGLE:
-			ret = new Rectangle();
-			break ;
-		case RED:
-			ret = new Red();
-			break ;
-		case GREEN:
-			ret = new Green();
-			break ;
-		case BLUE:
-			ret = new Blue();
-			break ;
-		
+	}
+
+//	public static Item getItem(AllObjects type) {
+//	Item ret = null ; 
+//	
+//	switch (type) {
+//	case CIRCLE:
+//	case SQUARE:
+//	case RECTANGLE:
+//		ret = new ShapeFactory().getShape(type) ;
+//		break ;
+//	case RED:
+//	case GREEN:
+//	case BLUE:
+//		ret = new ColorFactory().getColor(type);
+//		break ;
+//	
+//	default:
+//		return ret;
+//	}
+//	return ret;
+// }
+
+	public static Item getItem(String type) {
+		Item ret = null;
+
+		switch ( type ) {
+		case "circle":
+		case "square":
+		case "rectangle":
+			ret = (Item) new ShapeFactory().getShape(type);
+			break;
+		case "red":
+		case "green":
+		case "blue":
+			ret = (Item) new ColorFactory().getColor(type);
+			break;
+
 		default:
 			return ret;
 		}
 		return ret;
-		
-		
+
 	}
 
 }

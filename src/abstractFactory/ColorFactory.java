@@ -21,10 +21,24 @@ public class ColorFactory extends AbstractFactory{
 			return null ; 
 		}
 	}
+	public Item getColor(AllObjects type) {
+		switch (type) {
+		case RED:
+			return new Red() ; 
+		case GREEN:
+			return new Green() ; 
+		case BLUE:
+			return new Blue() ; 
+			
+		default:
+			return null ; 
+		}
+	}
 
 	@Override
 	public Shape getShape(String string) {
 		return null;
 	}
+
 
 }
